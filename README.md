@@ -5,6 +5,7 @@
 
 * `WEB application with only markup languages + JS. No environment creation required.`
 * `Register at https://beta.openai.com/ and request an API KEY to develop your improvements locally.`
+* `Put your API KEY in Authorization, after Bearer, inside script.js`
 
 ### How to use:
 
