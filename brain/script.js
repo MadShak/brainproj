@@ -8,7 +8,7 @@ if (form !== null) {
     event.preventDefault();
     const message = document.getElementById('message').value;
     chat.innerHTML += `<p><strong>@Pinky:</strong> ${message}</p>`;
-
+    document.getElementById("message").value = "";
   
     // Request
     fetch('https://api.openai.com/v1/completions', {
