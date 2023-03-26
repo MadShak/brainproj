@@ -7,7 +7,7 @@ if (form !== null) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const message = document.getElementById('message').value;
-    chat.innerHTML += `<p><strong>@Pinky:</strong> ${message}</p>`;
+    chat.innerHTML += `<p><strong style="color: red;">@Pinky:</strong> ${message}</p>`;
     document.getElementById("message").value = "";
   
     // Request
@@ -25,7 +25,7 @@ if (form !== null) {
     }).then(response => response.json())
       .then(data => {
         const text = data.choices;
-        chat.innerHTML += `<p><strong>@Brain:</strong> ${text[0].text}</p>`;
+        chat.innerHTML += `<p><strong style="color: blue;">@Brain:</strong> ${text[0].text}</p>`;
       });
   });
 }
