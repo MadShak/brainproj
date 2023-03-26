@@ -15,7 +15,7 @@ if (form !== null) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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'
+        'Authorization': 'Bearer '
       },
       body: JSON.stringify({
         prompt: message,
