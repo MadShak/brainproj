@@ -7,7 +7,7 @@ if (form !== null) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const message = document.getElementById('message').value;
-    chat.innerHTML += `<p>Pensando sobre *${message}*...</p>`;
+    chat.innerHTML += `<p><strong>@Pinky:</strong> ${message}</p>`;
 
   
     // Request
@@ -15,7 +15,7 @@ if (form !== null) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer '
+        'Authorization': 'Bearer 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'
       },
       body: JSON.stringify({
         prompt: message,
@@ -25,7 +25,7 @@ if (form !== null) {
     }).then(response => response.json())
       .then(data => {
         const text = data.choices;
-        chat.innerHTML += `<p>${text[0].text}</p>`;
+        chat.innerHTML += `<p><strong>@Brain:</strong> ${text[0].text}</p>`;
       });
   });
 }
