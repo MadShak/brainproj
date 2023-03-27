@@ -4,46 +4,77 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" id="favicon" href="img/ico.png">
 
     <title>@BRAIN</title>
 
-    <!-- By Shak -->
-    
+    <!--By Shak-->
+
+    <style>
+      .text-primary, .text-secondary, .text-success, .text-danger, .text-warning {
+        font-family: 'Roboto', sans-serif;
+      }
+      .fixed-top {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      #form {
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+      }
+
+    </style>
+
   </head>
   <body style="background-color: black; color: rgb(255, 255, 255); font-size: 20px;">
-    <br><br>
-
-  <br>
   <div class="small">
-    <div class="col-sm-12 text-center">
+    <div class="col-sm-12 text-center fixed-top">
 
       <form id="form">
 
         <div class="container-sm">
           <div class="form-group">
 
-            <a  class="text-primary display-3"><strong>What do u wanna know,</strong></a>                    
-            <a  class="text-danger display-3"><strong> Pinky?</strong></a>
+            <br><br>
+
+            <a  class="text-primary display-2"><strong>B</strong></a>
+            <a  class="text-secondary display-2"><strong>R</strong></a>
+            <a  class="text-success display-2"><strong>A</strong></a>
+            <a  class="text-danger display-2"><strong>I</strong></a>
+            <a  class="text-warning display-2"><strong>N</strong></a>
             </a>
 
-            <br><br><br><br><br><br>
+            <br><br><br>
 
-            <input type="text" class="form-control" id="message">
+            <div class="input-group input-group-lg mb-3">
+              <input type="text" class="form-control" id="message" placeholder="What do u wanna know, Pinky?">
+              <div class="input-group-append">
+                <button class="btn btn-dark btn-lg" type="submit" id="send">
+                  <img src="img/seta-branca.png" alt="Send">
+                </button>
+                <button type="submit" class="btn btn-dark btn-lg" id="refreshButton">
+                  <img src="img/reloud.png" alt="Send">
+                </button>
+              </div>
+            </div>
 
           </div>
        </div>
-
-        <button class="btn btn-dark btn-sm" type="submit" id="send"> Send </button>
-        <button type="button" class="btn btn-dark btn-sm" id="refreshButton"> Clean </button>
-
   
       </form>
 
     </div>
   </div>
   
-  <br><br>
+  <br><br><br><br><br><br><br><br><br><br>
+
   <div class="small">
     <div class="col-sm-12 text-justify">
      
