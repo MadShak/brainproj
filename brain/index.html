@@ -30,6 +30,14 @@
         z-index: 9999;
       }
 
+      #loading {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+
     </style>
 
   </head>
@@ -50,9 +58,7 @@
             <a  class="text-danger display-2"><strong>I</strong></a>
             <a  class="text-warning display-2"><strong>N</strong></a>
             </a>
-
             <br><br><br>
-
             <div class="input-group input-group-lg mb-3">
               <input type="text" class="form-control" id="message" placeholder="What do u wanna, Pinky?">
               <div class="input-group-append">
@@ -64,7 +70,6 @@
                 </button>
               </div>
             </div>
-
           </div>
        </div>
   
@@ -72,13 +77,15 @@
 
     </div>
   </div>
-  
-  <br><br><br><br><br><br><br><br><br><br>
+
+</div>
+  <div id="loading"></div>
+  <br><br><br><br><br><br><br><br><br><br><br>
 
   <div class="small">
     <div class="col-sm-12 text-justify">
      
-    <div id="chat"></div>
+      <div id="chat"></div>      
 
     </div>
   </div>
