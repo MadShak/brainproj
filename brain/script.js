@@ -30,7 +30,3 @@ if (form !== null) {
       });
   });
 }
-
-document.getElementById('refreshButton').addEventListener('click', function() {
-  location.reload();
-});
