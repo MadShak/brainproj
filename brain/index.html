@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" id="favicon" href="src/assets/img/logo.png">
+    <link rel="stylesheet" type="text/css" href="src/app/layouts/da-vinci.css">
+
+    <title>@Brain</title>
+
+    <!--BY SHAK-->
+
+  </head>
+
+  <body>
+
+  <div class="small">
+    <div class="col-sm-12 text-center fixed-top">
+
+      <form id="form">
+
+        <div class="container-sm">
+          <div class="form-group">
+            <br>
+            
+            <div class="input-group input-group-lg mb-3 d-flex justify-content-center align-items-center w-100 text-center">
+              <div class="small">
+                <div class="col-sm-12 d-flex justify-content-center align-items-center text-justify pl-3">
+                  <a href="https://brainproj.netlify.app"><img src="src/assets/img/logo.png" alt="Logo" width="47" height="48" class="pr-0 logo"></a>
+                </div>                               
+              </div>
+              <input type="text" class="form-control rounded-pill" id="message" placeholder="Ask anything...">
+              <div class="input-group-append">               
+                <button class="btn btn-link btn-no-glow d-flex justify-content-end align-items-center" type="submit" id="send">
+                  <img src="src/assets/img/seta-branca.png" alt="Send" width="20" height="20" class="pr-0" id="minha-imagem">
+                </button>
+              </div>
+            </div>
+            
+          </div>
+       </div>
+  
+      </form>
+
+    </div>
+  </div>
+
+  <div id="loading"></div>
+  <br><br><br><br>
+
+  <div class="small">
+    <div class="col-sm-12 text-justify">
+     
+      <div id="chat"></div>      
+
+    </div>
+  </div>
+
+<script src="src/app/core/services/da-vinci.js"></script>
+
+</body>
+</html>
