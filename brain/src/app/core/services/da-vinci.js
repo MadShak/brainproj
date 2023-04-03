@@ -20,26 +20,34 @@ if (form !== null) {
     loading.innerHTML = '<img src="src/assets/img/load-ico.gif" alt="loading" width="50" height="50">';
 
     // Request
-    const response = await fetch('https://api.openai.com/v1/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        prompt: message,
-        model: 'text-davinci-003',
-        max_tokens: 4000
-      })
-    });
-    const data = await response.json();
-    const text = data.choices;
-    loading.innerHTML = "";
-    chat.innerHTML += `<p><strong style="color: blue;">@Brain:</strong> ${text[0].text}</p>`;
-    setTimeout(() => {
-      window.scrollTo(0, document.body.scrollHeight);
-    }, 100);
+    try {
+      const response = await fetch('https://api.openai.com/v1/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ',
+          'Access-Control-Allow-Origin': '*'
+        },
+        body: JSON.stringify({
+          prompt: message,
+          model: 'text-davinci-003',
+          max_tokens: 4000
+        })
+      });
+      const data = await response.json();
+      const text = data.choices;
+      loading.innerHTML = "";
+      chat.innerHTML += `<p><strong style="color: blue;">@Brain:</strong> ${text[0].text}</p>`;
+      setTimeout(() => {
+        window.scrollTo(0, document.body.scrollHeight);
+      }, 100);
+    } catch (error) {
+      console.log(error);
+      chat.innerHTML += `<p><strong style="color: blue;">@Brain:</strong> I'm really tired, Pinky. Come back later, please.</p>`;
+      setTimeout(() => {
+        window.scrollTo(0, document.body.scrollHeight);
+      }, 100);
+    }
 
   });
 
